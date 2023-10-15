@@ -35,6 +35,7 @@ export default function UserSidebar() {
             { coins: watchlist.filter((watch) => watch !== coin?.id) },
             {merge: true}
           );
+
           setAlert({
             open: true,
             message: `${coin.name} Removed From the Watchlist !`,
@@ -57,11 +58,13 @@ export default function UserSidebar() {
 
     const logOut = () => {
         signOut(auth);
+
         setAlert({
             open: true,
-            message: 'Logout successful!',
+            message: 'Logout Successful !',
             type: 'success'
         });
+
         toggleDrawer();
     }
 
